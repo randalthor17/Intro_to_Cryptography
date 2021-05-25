@@ -19,9 +19,9 @@ def check_symbols_encode(char):
     elif char == '@':
         char = 'At sign'
     elif char == ')':
-        char = 'Bracket, close (parenthesis)'
+        char = 'Bracket close (parenthesis)'
     elif char == '(':
-        char = 'Bracket, open (parenthesis)'
+        char = 'Bracket open (parenthesis)'
     elif char == ':':
         char = 'Colon'
     elif char == ',':
@@ -55,9 +55,9 @@ def check_symbols_decode(char):
         char = "'"
     elif char == 'At sign':
         char = '@'
-    elif char == 'Bracket, close (parenthesis)':
+    elif char == 'Bracket close (parenthesis)':
         char = ')'
-    elif char == 'Bracket, open (parenthesis)':
+    elif char == 'Bracket open (parenthesis)':
         char = '('
     elif char == 'Colon':
         char = ':'
