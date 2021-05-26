@@ -1,4 +1,7 @@
 def affine_encode():
+    print('From Wikipedia: \n')
+    print('"The affine cipher is a type of monoalphabetic substitution cipher, where each letter in an alphabet is mapped to its numeric equivalent, encrypted using a simple mathematical function, and converted back to a letter. The formula used means that each letter encrypts to one other letter, and back again, meaning the cipher is essentially a standard substitution cipher with a rule governing which letter goes to which. As such, it has the weaknesses of all substitution ciphers. Each letter is enciphered with the function (ax + b) mod 26, where b is the magnitude of the shift."\n')
+    print('At this moment, this program only supports encryption using affine cipher.\n')
     allowed_a_vals = [1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25]
     m = 26
     str_new = ''

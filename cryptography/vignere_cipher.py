@@ -29,3 +29,11 @@ def vignere_decode():
         deciphertext += char
     print('The decoded string is: ' + deciphertext)
 
+def vignere():
+    print('From Wikipedia: \n')
+    print('"The Vigenère cipher (French pronunciation: ​[viʒnɛːʁ]) is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers, based on the letters of a keyword. It employs a form of polyalphabetic substitution."\n')
+    sel = input('Press 1 and enter to encrypt a string using Vignere cipher, and press 2 and enter to decrypt a string: ')
+    if sel == '1':
+        vignere_encode()
+    elif sel == '2':
+        vignere_decode()

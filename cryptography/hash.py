@@ -1,4 +1,4 @@
-from file_folder_chooser import file_chooser
+from  cryptography.file_folder_chooser import file_chooser
 from hashlib import *
 ENCODING = 'utf-8'
 BLOCK_SIZE = 65536
@@ -44,5 +44,4 @@ def hash_file():
     print('SHA-512: ' + sha512_hash.hexdigest().upper())
     print('SHA3-256: ' + sha3_256_hash.hexdigest().upper())
     print('SHA3-512: ' + sha3_512_hash.hexdigest().upper())
-
-hash_file()
+    

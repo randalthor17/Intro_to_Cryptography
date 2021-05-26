@@ -1,5 +1,5 @@
 from base64 import *
-from file_folder_chooser import file_chooser, folder_chooser
+from cryptography.file_folder_chooser import file_chooser, folder_chooser
 ENCODING = 'utf-8'
 
 def base64_encode():
