@@ -38,7 +38,7 @@ def selection_menu_home():
     print('3. Base-n Conversion, and\n')
     print('4. Hashing.\n')
     print('Also as a bonus, there are 2 extra functions: \n')
-    print('a. Morse code conersion, and\n')
+    print('a. Morse code conversion, and\n')
     print('b. Frequency Distribution.\n')
     sel = input('Press 1/2/3/4/a/b and press Enter, or press 0 to exit the program: ')
     clear()
@@ -193,7 +193,7 @@ def bonus_freq_analysis():
         selection_menu_home()
 
 def bonus_morse_convert():
-    print('From wikipedia: \n')
+    print('From Wikipedia: \n')
     print('"Morse code is a method used in telecommunication to encode text characters as standardized sequences of two different signal durations, called dots and dashes, or dits and dahs. Morse code is named after Samuel Morse, one of the inventors of the telegraph.\n"')
     print('"International Morse Code, also known as Continental Morse Code, encodes the 26 Latin letters A through Z, one non-Latin letter, the Arabic numerals, and a small set of punctuation and procedural signals (prosigns). There is no distinction between upper and lower case letters. Each Morse code symbol is formed by a sequence of dits and dahs. The dit duration is the basic unit of time measurement in Morse code transmission. The duration of a dah is three times the duration of a dit. Each dit or dah within an encoded character is followed by a period of signal absence, called a space, equal to the dit duration. The letters of a word are separated by a space of duration equal to three dits, and words are separated by a space equal to seven dits."\n')
     sel = input('Press 1 and enter to convert a string to morse code, press 2 and enter to convert morse code to plaintext, or press 0 and enter to go back to the main menu: ')
