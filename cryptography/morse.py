@@ -1,5 +1,7 @@
 import csv
 
+MORSE_CSV = 'cryptography/morse.csv'
+
 def csv_to_dict(csv_file):
     d = dict()
     with open(csv_file, "r") as f:
@@ -89,11 +91,10 @@ def morse_encode():
     string = input('Enter the text to be encoded into morse code: ')
     string = string.upper()
     morse = ''
-    morse_dict = csv_to_dict('morse.csv')
+    morse_dict = csv_to_dict(MORSE_CSV)
     for char in string:
         char = check_symbols_encode(char)
         if char != ' ':
-            print(char)
             morse += morse_dict[char] + ' '
         else:
             morse += '  '
@@ -103,7 +104,7 @@ def morse_decode():
     morse = input('Enter the morse code to be decoded: ') + ' '
     string = ''
     letter = ''
-    morse_dict = csv_to_dict('morse.csv')
+    morse_dict = csv_to_dict(MORSE_CSV)
     for dot_dash in morse:
         if dot_dash != ' ':
             space = 0

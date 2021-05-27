@@ -1,3 +1,5 @@
+from cryptography.morse import morse_decode, morse_encode
+from cryptography.freq_analysis import freq_analysis
 from cryptography.hash import *
 from cryptography.base_n_conversion import *
 from cryptography.vignere_cipher import *
@@ -35,7 +37,10 @@ def selection_menu_home():
     print('2. Encoding/Decoding,\n')
     print('3. Base-n Conversion, and\n')
     print('4. Hashing.\n')
-    sel = input('Press 1/2/3/4 and press Enter, or press 0 to exit the program: ')
+    print('Also as a bonus, there are 2 extra functions: \n')
+    print('a. Morse code conersion, and\n')
+    print('b. Frequency Distribution.\n')
+    sel = input('Press 1/2/3/4/a/b and press Enter, or press 0 to exit the program: ')
     clear()
     if sel == '1':
         selection_ciphers()
@@ -45,6 +50,10 @@ def selection_menu_home():
         selection_base_n()
     elif sel == '4':
         selection_hashing()
+    elif sel == 'a':
+        bonus_morse_convert()
+    elif sel == 'b':
+        bonus_freq_analysis()
     elif sel == '0':
         exit()
         
@@ -172,6 +181,32 @@ def selection_hashing():
     clear()
     if sel == 's':
         selection_hashing()
+    elif sel == '0':
+        selection_menu_home()
+
+
+def bonus_freq_analysis():
+    freq_analysis()
+    sel = input('Press 0 and enter to go back to the main menu: ')
+    clear()
+    if sel == '0':
+        selection_menu_home()
+
+def bonus_morse_convert():
+    print('From wikipedia: \n')
+    print('"Morse code is a method used in telecommunication to encode text characters as standardized sequences of two different signal durations, called dots and dashes, or dits and dahs. Morse code is named after Samuel Morse, one of the inventors of the telegraph.\n"')
+    print('"International Morse Code, also known as Continental Morse Code, encodes the 26 Latin letters A through Z, one non-Latin letter, the Arabic numerals, and a small set of punctuation and procedural signals (prosigns). There is no distinction between upper and lower case letters. Each Morse code symbol is formed by a sequence of dits and dahs. The dit duration is the basic unit of time measurement in Morse code transmission. The duration of a dah is three times the duration of a dit. Each dit or dah within an encoded character is followed by a period of signal absence, called a space, equal to the dit duration. The letters of a word are separated by a space of duration equal to three dits, and words are separated by a space equal to seven dits."\n')
+    sel = input('Press 1 and enter to convert a string to morse code, press 2 and enter to convert morse code to plaintext, or press 0 and enter to go back to the main menu: ')
+    if sel == '1':
+        morse_encode()
+    elif sel == '2':
+        morse_decode()
+    elif sel == '0':
+        selection_menu_home()
+    sel = input('Press s and enter to go back to the morse conversion selection menu and press 0 and enter to go back to the main menu: ')
+    clear()
+    if sel == 's':
+        bonus_morse_convert()
     elif sel == '0':
         selection_menu_home()
 
