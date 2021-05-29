@@ -24,7 +24,7 @@ def base_n_convert_int_base():
     print('The converted number is: ' + number_conv)
 
 def base_n_convert_base_int():
-    number = input('Enter a base-n number to be converted to a decimal integer (Enter the nubers like [173, 2, 5] if the base is greater than 36): ')
+    number = input('Enter a base-n number to be converted to a decimal integer (Enter the nubers like 173, 2, 5 (digits seperated by commas) sif the base is greater than 36): ')
     base_given = int(input('Enter the base of the entered number: '))
     number_conv = ''
     if number == 0:
