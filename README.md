@@ -4,4 +4,4 @@ This is a collection of programs that demonstrate basics of cryptography. At the
 
 ## Disclaimer:
 
-This is a work in progress. The main program is final, but I don't know, there may yet be problems. There may be bugs in the modules.
+The main program is final, but I don't know, there may yet be problems. There may be bugs in the modules.
