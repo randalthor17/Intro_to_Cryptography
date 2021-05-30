@@ -14,8 +14,11 @@ def vignere_encode():
     key = generate_key(string, key)
     ciphertext = ''
     for i in range(len(string)):
-        char = chr((ord(string[i]) + ord(key[i])) % 26 + 65)
-        ciphertext += char
+        if ord(string[i]) >=65 and ord(string[i]) <= 90:
+            char = chr((ord(string[i]) + ord(key[i])) % 26 + 65)
+            ciphertext += char
+        else:
+            ciphertext += string[i]
     print('The encoded string is: ' + ciphertext)
 
 def vignere_decode():
@@ -25,8 +28,11 @@ def vignere_decode():
     key = generate_key(string, key)
     deciphertext = ''
     for i in range(len(string)):
-        char = chr((ord(string[i]) - ord(key[i]) + 26) % 26 + 65)
-        deciphertext += char
+        if ord(string[i]) >=65 and ord(string[i]) <= 90:
+            char = chr((ord(string[i]) - ord(key[i]) + 26) % 26 + 65)
+            deciphertext += char
+        else:
+            deciphertext += string[i]
     print('The decoded string is: ' + deciphertext)
 
 def vignere():
